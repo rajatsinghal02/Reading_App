@@ -1,22 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import Tts from 'react-native-tts';
-import { Menu, Provider } from 'react-native-paper'; 
+import { Provider } from 'react-native-paper'; 
 
-const poems = {
-  "Twinkle Twinkle Little Star": 
-  `Twinkle, twinkle, little star, How I wonder what you are! Up above the world so high, Like a diamond in the sky. Twinkle, twinkle, little star, How I wonder what you are!`,
-  
-  "Hickory Dickory Dock": 
-  `Hickory dickory dock, The mouse ran up the clock. The clock struck one, The mouse ran down. Hickory dickory dock.`,
 
-  "Baa Baa Black Sheep": 
-  `Baa, baa, black sheep, Have you any wool? Yes sir, yes sir, Three bags full. One for the master, One for the dame, And one for the little boy Who lives down the lane.`
-};
-
-const App = () => {
-  const [selectedPoem, setSelectedPoem] = useState("Twinkle Twinkle Little Star"); 
-  const [words, setWords] = useState(poems["Twinkle Twinkle Little Star"].split(' ')); 
+const App = ({route, navigation}) => {
+  const { poemTitle, poemText } = route.params;
+  const [selectedPoem, setSelectedPoem] = useState(poemTitle); 
+  const [words, setWords] = useState(poemText.split(' '));  
   const [currentIndex, setCurrentIndex] = useState(-1); 
   const [isReading, setIsReading] = useState(false);    
   const [intervalId, setIntervalId] = useState(null);   
@@ -26,7 +17,6 @@ const App = () => {
 
     Tts.setDefaultRate(0.5);
     Tts.setDefaultLanguage('en-US');
-    Tts.setDefaultVoice('com.apple.ttsbundle.Moira-compact');
    
     return () => {
       Tts.stop();
@@ -97,42 +87,30 @@ const App = () => {
   };
 
   
+
   const handleReset = () => {
     setCurrentIndex(-1); 
-    setWords(poems[selectedPoem].split(' ')); 
+    setWords(poemText.split(' ')); 
     Tts.stop(); 
   };
-
   
   const handleSelectPoem = (poemTitle) => {
     setSelectedPoem(poemTitle); 
-    setWords(poems[poemTitle].split(' '));
+    setWords(poemText.split(' ')); 
     setCurrentIndex(-1); 
     Tts.stop(); 
     setMenuVisible(false); 
   };
 
   return (
-    <Provider>
+<Provider>
       <View style={styles.container}>
-        {/* Dropdown for selecting poems */}
-        <Menu
-          visible={menuVisible}
-          onDismiss={() => setMenuVisible(false)}
-          anchor={
-            <TouchableOpacity onPress={() => setMenuVisible(true)} style={styles.dropdownButton}>
-              <Text style={styles.dropdownText}>Select Poem: {selectedPoem}</Text>
-            </TouchableOpacity>
-          }
-        >
-          {Object.keys(poems).map((poemTitle, index) => (
-            <Menu.Item
-              key={index}
-              onPress={() => handleSelectPoem(poemTitle)}
-              title={poemTitle}
-            />
-          ))}
-        </Menu>
+        {/* Dropdown for selecting poems (Optional) */}
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+          <Text style={styles.backButtonText}>Back</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.poemTitle}>{selectedPoem}</Text>
 
         {/* Display the poem */}
         <Text style={styles.poem}>
@@ -141,7 +119,7 @@ const App = () => {
               key={index}
               style={[
                 styles.word,
-                index === currentIndex ? styles.highlightedWord : null,  // Highlight only when index matches currentIndex
+                index === currentIndex ? styles.highlightedWord : null,
               ]}
             >
               {word + ' '}
@@ -227,6 +205,20 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     textAlign: 'center',
+  },
+  backButton: {
+    alignSelf: 'flex-start',
+    marginBottom: 10,
+  },
+  backButtonText: {
+    color: '#3498db',
+    fontSize: 18,
+  },
+  poemTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 20,
   },
 });
 
