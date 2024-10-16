@@ -1,0 +1,145 @@
+[
+    {
+      "id": 1,
+      "title": "Twinkle Twinkle Little Star",
+      "category": "Fantasy",
+      "image": "twinkle.jpg",
+      "text": "Twinkle, twinkle, little star, How I wonder what you are! Up above the world so high, Like a diamond in the sky. Twinkle, twinkle, little star, How I wonder what you are!"
+    },
+    {
+      "id": 2,
+      "title": "Hickory Dickory Dock",
+      "category": "Fantasy",
+      "image": "hickory.jpg",
+      "text": "Hickory dickory dock, The mouse ran up the clock. The clock struck one, The mouse ran down. Hickory dickory dock."
+    },
+    {
+      "id": 3,
+      "title": "Baa Baa Black Sheep",
+      "category": "Fantasy",
+      "image": "Baa.jpg",
+      "text": "Baa, baa, black sheep, Have you any wool? Yes sir, yes sir, Three bags full. One for the master, One for the dame, And one for the little boy Who lives down the lane."
+    },
+    {
+      "id": 4,
+      "title": "The Brave Little Rabbit",
+      "category": "Animal Tales",
+      "image": "rabbit.jpg",
+      "text": "Once upon a time, in a meadow bright, Lived a brave little rabbit, full of delight."
+    },
+    {
+        "id": 5,
+        "title": "The Sun is Shining Bright",
+        "category": "Nature",
+        "image": "icon.png",
+        "text": "The sun is shining bright, It fills the world with light. Up in the sky so high, It watches as birds fly by. With every beam of gold, Its warmth is never cold."
+    },
+    {
+        "id": 6,
+        "title": "Raindrop, Raindrop",
+        "category": "Nature",
+        "image": "icon.png",
+        "text": "Raindrop, raindrop, falling down, Splish-splash, on the ground. Pitter-patter on the street, Making puddles near my feet. Dance and play, with joy and glee, The rain will wash the world for me."
+    },
+    {
+        "id": 7,
+        "title": "The Friendly Little Bee",
+        "category": "Animal Tales",
+        "image": "icon.png",
+        "text": "Buzz, buzz, goes the little bee, Flying from flower to tree. Gathering nectar, working all day, Helping flowers bloom in a beautiful way. A busy bee is never slow, It makes the garden glow and grow."
+    },
+    {
+        "id": 8,
+        "title": "The Silly Cat",
+        "category": "Animal Tales",
+        "image": "icon.png",
+        "text": "The silly cat is chasing yarn, Running fast across the barn. Jumping high and pouncing low, Watch her twirl, to and fro! With a swish and a purr, she naps in peace, Dreaming of fish and endless feasts."
+    },
+    {
+        "id": 9,
+        "title": "Goodnight Moon",
+        "category": "Bedtime",
+        "image": "icon.png",
+        "text": "Goodnight moon, shining high, Glowing softly in the sky. Stars above, twinkling bright, Watching over through the night. Close your eyes and dream away, Until we meet another day."
+    },
+    {
+        "id": 10,
+        "title": "The Sleepy Owl",
+        "category": "Bedtime",
+        "image": "icon.png",
+        "text": "The sleepy owl hoots in the night, With its wings, it takes flight. Through the trees, it softly glides, As the moon shines on the tides. When the sun begins to rise, The owl will close its tired eyes."
+    },
+    {
+        "id": 11,
+        "title": "Spring is Here!",
+        "category": "Seasons",
+        "image": "icon.png",
+        "text": "Spring is here, the flowers bloom, Birds are singing a happy tune. The grass grows green, the sky so blue, The world is fresh and bright and new. Bunnies hop, and squirrels play, Hooray for Spring, it's here to stay!"
+    },
+    {
+        "id": 12,
+        "title": "Winter Wonderland",
+        "category": "Seasons",
+        "image": "icon.png",
+        "text": "Snowflakes fall from the sky, Softly drifting, floating by. The ground is covered, white as cream, Like a winter wonderland dream. Bundle up, let's go outside, In the snow, let's take a ride!"
+    },
+    {
+        "id": 13,
+        "title": "Rocket to the Moon",
+        "category": "Imagination",
+        "image": "icon.png",
+        "text": "I’m a rocket soaring high, Up, up, up into the sky. Past the clouds, the stars I see, The moon is waiting there for me. Around the planets, I will zoom, On my trip to the big, bright moon!"
+    },
+    {
+        "id": 14,
+        "title": "Pirate Adventure",
+        "category": "Imagination",
+        "image": "icon.png",
+        "text": "Ahoy, matey! Let's set sail, On a ship, we’ll catch the gale. Treasure maps and seas so wide, With parrots perched by our side. Gold and jewels we’ll surely find, Adventure waits, let’s not stay behind!"
+    },
+    {
+        "id": 15,
+        "title": "My Best Friend and Me",
+        "category": "Friendship",
+        "image": "icon.png",
+        "text": "My best friend and me, We laugh with so much glee. We play all day, run and jump, Through fields, we skip and bump. No matter what, rain or shine, My best friend is always mine."
+    },
+    {
+        "id": 16,
+        "title": "Sharing is Caring",
+        "category": "Friendship",
+        "image": "icon.png",
+        "text": "Sharing is caring, that's what we know, It helps our friendship grow and grow. With every toy, with every snack, We share with love, and never look back. A kind heart is what we need, To plant the friendship seed."
+    },
+    {
+        "id": 17,
+        "title": "The ABC Song",
+        "category": "Learning",
+        "image": "icon.png",
+        "text": "A is for apple, juicy and sweet, B is for ball, that rolls to your feet. C is for cat, with fur soft as silk, D is for dog, who drinks water like milk. The alphabet is fun to see, Come along, sing with me!"
+    },
+    {
+        "id": 18,
+        "title": "Numbers All Around",
+        "category": "Learning",
+        "image": "icon.png",
+        "text": "One, two, three, count with me, Numbers are fun, as you can see. Four, five, six, look around, In everything, numbers can be found. Seven, eight, nine, and ten, Now let’s start and count again!"
+    },
+    {
+        "id": 19,
+        "title": "The Little Red Boat",
+        "category": "Adventure",
+        "image": "icon.png",
+        "text": "A little red boat on the open sea, Sailing along, wild and free. The waves are gentle, the sky is blue, What adventure is waiting for me and you? With the wind in our sail, we glide so fast, Let’s make this adventure last!"
+    },
+    {
+        "id": 20,
+        "title": "The Magic Castle",
+        "category": "Adventure",
+        "image": "icon.png",
+        "text": "Up on a hill, the castle stands, Filled with magic from distant lands. Wizards and knights, dragons too, With endless quests for me and you. Let’s ride to the castle, brave and bold, Where every story will be told!"
+    }
+      
+      
+  ]
+  

@@ -1,8 +1,9 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import CustomStatusBar from '../../components/CustomStatusBar/CustomStatusBar';
 import Swiper from 'react-native-swiper';
 import {Image} from 'react-native-animatable';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const OnBoarding = ({navigation}) => {
   const slides = [
@@ -27,6 +28,29 @@ const OnBoarding = ({navigation}) => {
         'Personalized reading that boosts progress, confidence, and a love for reading.',
     },
   ];
+
+  // Local state to check if onboarding is shown already
+  const [isFirstTime, setIsFirstTime] = useState(true);
+
+  // Check if the user has already seen the onboarding screen
+  useEffect(() => {
+    const checkIfFirstTime = async () => {
+      const isOnBoardingShown = await AsyncStorage.getItem('onBoardingShown');
+      if (isOnBoardingShown) {
+        navigation.replace('TabNavigator'); // Navigate to main screen if onboarding has been shown
+      }
+    };
+    checkIfFirstTime();
+  }, [navigation]);
+
+  const handleGetStarted = async () => {
+    await AsyncStorage.setItem('onBoardingShown', 'true'); // Set flag to indicate onboarding has been shown
+    navigation.replace('TabNavigator'); // Navigate to main screen
+  };
+
+  if (!isFirstTime) {
+    return null; // Optionally, return null if this is not the first time
+  }
 
   return (
     <CustomStatusBar statusBgColor="#FFFFFF">
@@ -58,9 +82,7 @@ const OnBoarding = ({navigation}) => {
           }}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => {
-              navigation.navigate('TabNavigator');
-            }}>
+            onPress={handleGetStarted}>
             <Text style={styles.buttontext}>Get Started</Text>
           </TouchableOpacity>
         </View>
